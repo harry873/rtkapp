@@ -73,12 +73,12 @@ const Todo = () => {
           </div>
           <div className="col-auto">
             <button
-              className="btn btn-lg btn-success mr-20"
+              className="btn btn-lg  mr-20 addbtn"
               onClick={updateTask}
             >
               Update
             </button>
-            <button className="btn btn-lg btn-danger" onClick={cancelUpdate}>
+            <button className="btn btn-lg btndanger" onClick={cancelUpdate}>
               Cancel
             </button>
           </div>
@@ -93,7 +93,7 @@ const Todo = () => {
             />
           </div>
           <div className="col-auto">
-            <button className="btn btn-lg btn-success" onClick={addTask}>
+            <button className="btn btn-lg addbtn" onClick={addTask}>
               Add Task{" "}
             </button>
           </div>
@@ -108,7 +108,7 @@ const Todo = () => {
           .sort((a, b) => (a.id > b.id ? 1 : -1))
           .map((item, i) => {
             return (
-              <div className="col taskBg my-3 m-2" key={item.id}>
+              <div className="col taskBg my-3 m-3" key={item.id}>
                 <div className={item.status ? "done" : ""}>
                   <span className="taskNumber"> {i + 1}</span>
                   <span className="taskText"> {item.title}</span>
